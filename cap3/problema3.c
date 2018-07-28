@@ -32,4 +32,4 @@ int main(){
     printf("Anios bisiestos: %d\n", cantBisiesto);
     printf("Fechas de error: %d\n", cantError);
     return 0;
-  }
+}
