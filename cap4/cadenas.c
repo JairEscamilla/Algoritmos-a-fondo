@@ -4,6 +4,7 @@
 void copiarCadena(char[], char[]);
 int longitud(char[]);
 int esVacia(char[]);
+void concatenarCadena(char t[], char s[]);
 
 // FUNCION PRINCIPAL
 int main(){
@@ -29,6 +30,14 @@ int main(){
   printf("b = [%s] es vacia? %d\n", b, esVacia(b));
   printf("c = [%s] es vacia? %d\n", c, esVacia(c));
 
+  // TEST DE CONCATENACION
+  char x[20] = {0};
+  printf("x = [%s], longitud(x)= %d\n", x, longitud(x));
+  concatenarCadena(x, "Hola");
+  printf("x = [%s], longitud(x)= %d\n", x, longitud(x));
+  concatenarCadena(x, " que tal?");
+  printf("x = [%s], longitud(x)= %d\n", x, longitud(x));
+  
   return 0;
 }
 
@@ -51,4 +60,15 @@ void copiarCadena(char t[], char s[]){
 
 int esVacia(char s[]){
   return s[0] == '\0';
+}
+
+void concatenarCadena(char t[], char s[]){
+  int i = 0;
+  int j = longitud(t);
+  while (s[i] != '\0') {
+    t[j] = s[i];
+    j+= 1;
+    i += 1;
+  }
+  t[j] = '\0';
 }
