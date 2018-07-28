@@ -4,7 +4,8 @@
 void copiarCadena(char[], char[]);
 int longitud(char[]);
 int esVacia(char[]);
-void concatenarCadena(char t[], char s[]);
+void concatenarCadena(char[], char[]);
+int compararCadenas(char[], char[]);
 
 // FUNCION PRINCIPAL
 int main(){
@@ -37,7 +38,12 @@ int main(){
   printf("x = [%s], longitud(x)= %d\n", x, longitud(x));
   concatenarCadena(x, " que tal?");
   printf("x = [%s], longitud(x)= %d\n", x, longitud(x));
-  
+
+  // TEST DE COMPARACION DE CADENAS
+  char pal[] = "Pablo";
+  char pals[] = "Juan";
+  printf("%s vs %s = %d\n", pal, pals, compararCadenas(pal, pals));
+
   return 0;
 }
 
@@ -71,4 +77,12 @@ void concatenarCadena(char t[], char s[]){
     i += 1;
   }
   t[j] = '\0';
+}
+
+int compararCadenas(char a[], char b[]){
+  int i = 0;
+  while (a[i] != '\0' && b[i] != '\0' && a[i] == b[i]) {
+    i+= 1;
+  }
+  return a[i]-b[i];
 }
