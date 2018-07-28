@@ -3,7 +3,9 @@
 // PROTOTIPO DE LAS FUNCIONES
 void copiarCadena(char[], char[]);
 int longitud(char[]);
+int esVacia(char[]);
 
+// FUNCION PRINCIPAL
 int main(){
   char s[10] = "Pablo";
   char t[] = "Juan";
@@ -17,6 +19,15 @@ int main(){
   printf("nom = %s\n", nom);
   printf("Longitud de %s = %d\n", "Pablo", longitud("Pablo"));
   printf("Longitud de %s = %d\n", nom, longitud(nom));
+
+  // TEST DE CADENAS VACIAS
+  char a[20] = { 0 };
+  char b[20] = "Hola";
+  char c[20] = "\0 que pasa ahora?";
+
+  printf("a = [%s] es vacia? %d\n", a, esVacia(a));
+  printf("b = [%s] es vacia? %d\n", b, esVacia(b));
+  printf("c = [%s] es vacia? %d\n", c, esVacia(c));
 
   return 0;
 }
@@ -37,3 +48,7 @@ void copiarCadena(char t[], char s[]){
    }
    return i;
  }
+
+int esVacia(char s[]){
+  return s[0] == '\0';
+}
