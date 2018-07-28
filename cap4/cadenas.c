@@ -1,7 +1,8 @@
 #include <stdio.h>
 
-// PROTOTIPO DE LA FUNCION
+// PROTOTIPO DE LAS FUNCIONES
 void copiarCadena(char[], char[]);
+int longitud(char[]);
 
 int main(){
   char s[10] = "Pablo";
@@ -12,8 +13,10 @@ int main(){
   printf("w = [%s]\n", w);
   char nom[15];
   // Asigno la cadena Pablo a nom
-  copiarCadena(nom, "Pablo");
+  copiarCadena(nom, "Juan");
   printf("nom = %s\n", nom);
+  printf("Longitud de %s = %d\n", "Pablo", longitud("Pablo"));
+  printf("Longitud de %s = %d\n", nom, longitud(nom));
 
   return 0;
 }
@@ -25,4 +28,12 @@ void copiarCadena(char t[], char s[]){
     i+= 1;
   }
   t[i] = '\0';
+ }
+
+ int longitud(char t[]){
+   int i = 0;
+   while (t[i] != '\0') {
+     i+= 1;
+   }
+   return i;
  }
