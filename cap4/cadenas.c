@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 // PROTOTIPO DE LAS FUNCIONES
 void copiarCadena(char[], char[]);
@@ -6,6 +7,7 @@ int longitud(char[]);
 int esVacia(char[]);
 void concatenarCadena(char[], char[]);
 int compararCadenas(char[], char[]);
+int cadenaAEntero(char s[]);
 
 // FUNCION PRINCIPAL
 int main(){
@@ -44,6 +46,11 @@ int main(){
   char pals[] = "Juan";
   printf("%s vs %s = %d\n", pal, pals, compararCadenas(pal, pals));
 
+  // TEST DE CADENA A ENTERO
+  char car[] = "123456";
+  int numero = cadenaAEntero(car);
+  printf("Cadena: %s\n", car);
+  printf("Numero: %d\n", numero);
   return 0;
 }
 
@@ -85,4 +92,13 @@ int compararCadenas(char a[], char b[]){
     i+= 1;
   }
   return a[i]-b[i];
+}
+
+int cadenaAEntero(char s[]){
+  int n = longitud(s);
+  double ret = 0;
+  for(int i = 0; s[i] != '\0'; i++){
+    ret+= pow(10, n-i-1) * (s[i] - '0');
+  }
+  return ret;
 }
