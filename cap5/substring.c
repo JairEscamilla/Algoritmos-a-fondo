@@ -15,3 +15,9 @@ char* substring(char* s, int desde, int hasta){
 }
 
 // FUNCION PRINCIPAL
+int main(){
+  char* x= "Esto es una cadena";
+  printf("%s\n", subString(x, 0, 4));
+  printf("%s\n", subString(x, 8, 11));
+  return 0;
+}
