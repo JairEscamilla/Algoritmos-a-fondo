@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 // PROTOTIPO DE LA FUNCION
 char * subString(char*, int, int);
 // Cuerpo de la funcion
