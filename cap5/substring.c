@@ -13,3 +13,5 @@ char* substring(char* s, int desde, int hasta){
   ret[j] = '\0';
   return ret;
 }
+
+// FUNCION PRINCIPAL
