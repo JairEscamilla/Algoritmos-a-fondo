@@ -21,6 +21,8 @@ int main(){
   insertar(arr, &len, 2, 0);
   insertar(arr, &len, 1, 0);
 
+  eliminar(arr, &len, 3);
+
   for(int i = 0; i < len; i++){
     printf("%d, ", arr[i]);
   }

@@ -40,3 +40,10 @@ void insertar(int a[], int* len, int v, int pos){
   a[pos] = v;
   *len = *len + 1;
 }
+
+void eliminar(int a[], int* len, int pos){
+  for(int i = pos; i < *len-1; i++){
+    a[i] = a[i+1];
+  }
+  *len = *len - 1;
+}
