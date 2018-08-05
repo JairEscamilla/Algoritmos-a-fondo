@@ -32,3 +32,11 @@ int buscarYagregar(int a[], int* len, int v, int* enc){
   }
   return pos;
 }
+
+void insertar(int a[], int* len, int v, int pos){
+  for(int i = *len; i > pos; i--){
+    a[i] = a[i-1];
+  }
+  a[pos] = v;
+  *len = *len + 1;
+}

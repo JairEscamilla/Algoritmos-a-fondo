@@ -15,5 +15,15 @@ int main(){
   printf("5 esta en la posicion %d\n", buscar(arr, len, 5));
   printf("7 esta en la posicion %d\n", buscar(arr, len, 7));
   printf("9 esta en la posicion %d\n", buscar(arr, len, 9));
+
+  insertar(arr, &len, 4, 0);
+  insertar(arr, &len, 3, 0);
+  insertar(arr, &len, 2, 0);
+  insertar(arr, &len, 1, 0);
+
+  for(int i = 0; i < len; i++){
+    printf("%d, ", arr[i]);
+  }
+  printf("\n");
   return 0;
 }
