@@ -26,6 +26,17 @@ int main(){
   for(int i = 0; i < len; i++){
     printf("%d, ", arr[i]);
   }
+
+  printf("\n");
+
+  insertarEnOrden(arr, &len, 4);
+  insertarEnOrden(arr, &len, 0);
+  insertarEnOrden(arr, &len, 1);
+
+  for(int i = 0; i < len; i++){
+    printf("%d, ", arr[i]);
+  }
+
   printf("\n");
   return 0;
 }

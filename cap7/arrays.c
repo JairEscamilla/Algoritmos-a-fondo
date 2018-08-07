@@ -47,3 +47,12 @@ void eliminar(int a[], int* len, int pos){
   }
   *len = *len - 1;
 }
+
+int insertarEnOrden(int a[], int* len, int v){
+  int i = 0;
+  while(i < * len && a[i] <= v){
+    i = i + 1;
+  }
+  insertar(a, len, v, i);
+  return i;
+}
