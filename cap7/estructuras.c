@@ -8,5 +8,5 @@ e = {123, "Jair"} ;
 int main(){
   // Declaro la variablede tipo Empleado
   printf("Nombre: %s\n", e.nombre);
-  return 0;
+  return 0; 
 }
