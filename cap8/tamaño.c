@@ -18,6 +18,6 @@ int main(){
   // Abro el archivo
   arch = fopen("DEMO.dat", "r+a");
   long size = fileSize(arch);
-  printf("El archivo tiene %ld bytes", size);
+  printf("El archivo tiene %ld bytes\n", size);
   return 0;
 }
