@@ -5,6 +5,7 @@ int main(){
   char c;
   while ((c == getc(f1)) != EOF) {
     putc(c, f2);
+    printf("Funciona\n");
   }
   fclose(f2);
   fclose(f1);
