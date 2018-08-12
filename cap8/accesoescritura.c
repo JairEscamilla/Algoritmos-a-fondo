@@ -16,7 +16,7 @@ int main(){
   Alumno reg = ingresoDatosXConsola();
 
   // Posiciono el identificador de posicion
-  fseek(arch, n*sizeof(Aluimno), SEEK_SET);
+  fseek(arch, n*sizeof(Alumno), SEEK_SET);
 
   // Grabo el registro pisando los valores anteriores
   fwrite(&reg, sizeof(Alumno), 1, arch);
