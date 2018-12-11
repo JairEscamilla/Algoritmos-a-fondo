@@ -9,6 +9,8 @@ typedef struct Nodo{
 // Funcion prototipo
 void agregar(Nodo** p, int v);
 void liberar(Nodo** p);
+void mostrar(Nodo* p);
+Nodo* buscar(Nodo* p, int v);
 // Funcion principal
 int main(){
   // Inicializamos la lista
@@ -19,7 +21,8 @@ int main(){
   agregar(&p, 7);
   agregar(&p, 3);
   agregar(&p, 9);
-
+  mostrar(p);
+  liberar(&p);
   return 0;
 }
 // Desarrollo de la funcion
@@ -49,4 +52,20 @@ void liberar(Nodo** p){
     free(*p);
     *p = prox;
   }
+}
+
+void mostrar(Nodo* p){
+  Nodo *aux = p;
+  while (aux != NULL) {
+    printf("%d, ", aux->valor);
+    aux = aux->sig;
+  }
+  printf("\n");
+}
+Nodo* buscar(Nodo* p, int v){
+  Nodo* aux = p;
+  while ((aux != NULL) && (aux->valor != v)) {
+    aux = aux->sig;
+  }
+  return aux;
 }
