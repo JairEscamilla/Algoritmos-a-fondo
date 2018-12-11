@@ -10,6 +10,7 @@ typedef struct Nodo{
 void agregar(Nodo** p, int v);
 void liberar(Nodo** p);
 void mostrar(Nodo* p);
+void eliminar(Nodo** p, int v);
 Nodo* buscar(Nodo* p, int v);
 // Funcion principal
 int main(){
@@ -68,4 +69,20 @@ Nodo* buscar(Nodo* p, int v){
     aux = aux->sig;
   }
   return aux;
+}
+void eliminar(Nodo** p, int v){
+  Nodo* aux = *p;
+  Nodo* ant = NULL;
+  while ((aux != NULL) && (aux->valor != v)) {
+    ant = aux;
+    aux = aux->sig;
+  }
+  if(aux != NULL){
+    if(ant != NULL){
+      ant->sig = aux->sig;
+    }else{
+      *p = aux->sig;
+    }
+    free(aux);
+  }
 }
