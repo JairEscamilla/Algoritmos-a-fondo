@@ -8,6 +8,7 @@ typedef struct Nodo{
 
 // Funcion prototipo
 void agregar(Nodo** p, int v);
+void liberar(Nodo** p);
 // Funcion principal
 int main(){
   // Inicializamos la lista
@@ -39,5 +40,13 @@ void agregar(Nodo** p, int v){
       }
       // como aux apunta al ultimo, entonces su siguiente sera el nuevo nodo
       aux->sig = nuevo;
+  }
+}
+
+void liberar(Nodo** p){
+  while (*p != NULL) {
+    Nodo* prox = (*p)->sig;
+    free(*p);
+    *p = prox;
   }
 }
