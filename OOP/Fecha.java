@@ -8,6 +8,11 @@ public class Fecha{
     public String toString(){
         return dia+"/"+mes+"/"+anio;
     }
+    // Sobreescribimos el metodo equals que se hereda de Object 
+    public boolean equals(Object o){
+        Fecha otra = (Fecha)o;
+        return (dia == otra.dia) && (mes == otra.mes) && (anio == otra.anio);
+    }
     public int getDia(){
         // retorna el valor de la variable dia 
         return dia;
