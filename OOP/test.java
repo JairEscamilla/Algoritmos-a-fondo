@@ -8,5 +8,6 @@ public class test{
         System.out.println("Dia: "+f.getDia());
         System.out.println("Mes: "+f.getMes());
         System.out.println("Anio: "+f.getAnio());
+        System.out.println(f);
     }
 }
