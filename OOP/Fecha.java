@@ -10,6 +10,10 @@ public class Fecha{
         mes = m;
         anio = a;
     }
+    // constructor sin argumentos
+    public Fecha(){
+        
+    }
     // Sobreescribimos el metodo toString  (es heredado de Object)
     public String toString(){
         return dia+"/"+mes+"/"+anio;
