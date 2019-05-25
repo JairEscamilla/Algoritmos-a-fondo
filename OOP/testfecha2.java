@@ -26,5 +26,7 @@ public class testfecha2{
             System.out.println("Son iguales");
         else
             System.out.println("Son distintas");
+        f1.addDias(365);
+        System.out.println("La nueva fecha es: "+ f1);
     }
 }

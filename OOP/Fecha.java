@@ -27,6 +27,30 @@ public class Fecha{
         String sAnio = s.substring(pos2+1);
         anio = Integer.parseInt(sAnio);
     }
+    // retorna la fecha expresada en dias
+    private int fechaToDias(){
+        return anio*360 + mes*60 + dia;
+    }
+    // asigna la fecha expresada en dias a los atributos 
+    private void diasToFecha(int i){
+        anio = (int)i/360;
+        int resto = i%360;
+        mes = (int)resto/30;
+        dia = resto%30;
+        if(dia == 0){
+            dia = 30;
+            mes--;
+        }
+        if(mes == 0){
+            mes = 12;
+            anio--;
+        }
+    }
+    public void addDias(int d){
+        // convertimos la fecha a dias y le sumamos d
+        int sum = fechaToDias()+d;
+        diasToFecha(sum);
+    }
     // Sobreescribimos el metodo toString  (es heredado de Object)
     public String toString(){
         return dia+"/"+mes+"/"+anio;
