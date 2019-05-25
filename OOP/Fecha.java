@@ -14,6 +14,19 @@ public class Fecha{
     public Fecha(){
         
     }
+    // constructor a partir de un String
+    public Fecha(String s){
+        // Buscamos la primera ocurrencia de '/'
+        int pos1 = s.indexOf('/');
+        // Buscamos la ultima ocurrencia de '/'
+        int pos2 = s.lastIndexOf('/');
+        String sDia = s.substring(0, pos1);
+        dia = Integer.parseInt(sDia);
+        String sMes = s.substring(pos1+1, pos2);
+        mes = Integer.parseInt(sMes);
+        String sAnio = s.substring(pos2+1);
+        anio = Integer.parseInt(sAnio);
+    }
     // Sobreescribimos el metodo toString  (es heredado de Object)
     public String toString(){
         return dia+"/"+mes+"/"+anio;
