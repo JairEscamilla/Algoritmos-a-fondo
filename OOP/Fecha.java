@@ -4,6 +4,10 @@ public class Fecha{
     private int dia;
     private int mes;
     private int anio;
+    // Sobreescribimos el metodo toString  (es heredado de Object)
+    public String toString(){
+        return dia+"/"+mes+"/"+anio;
+    }
     public int getDia(){
         // retorna el valor de la variable dia 
         return dia;
