@@ -4,6 +4,12 @@ public class Fecha{
     private int dia;
     private int mes;
     private int anio;
+    // constructor
+    public Fecha(int d, int m, int a){
+        dia = d;
+        mes = m;
+        anio = a;
+    }
     // Sobreescribimos el metodo toString  (es heredado de Object)
     public String toString(){
         return dia+"/"+mes+"/"+anio;
