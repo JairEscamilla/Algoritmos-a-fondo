@@ -10,15 +10,21 @@ public class FechaDetallada extends Fecha{
                                      "Noviembre", "Diciembre"};
     // Constructor nulo
     public FechaDetallada(){
+        super();
     }
 
     // Constructor que recibe dia, mes y anio
     public FechaDetallada(int d, int m, int a){
-        setDia(d);
+        /*setDia(d);
         setMes(m);
-        setAnio(a);
+        setAnio(a);*/
+        // Invocamos al constructor del padre
+        super(d, m, a);
     }
-
+    public FechaDetallada(String s){
+        // Invocamos al constructor del padre
+        super(s);
+    }
     public String toString(){
         return getDia() + " de "+ meses[getMes()-1] + " de " + getAnio();
     }
