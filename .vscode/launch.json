@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - TestMuestraConjunto",
+            "request": "launch",
+            "mainClass": "Polimorfismo.TestMuestraConjunto",
+            "projectName": "Algoritmos-a-fondo_33a7781f"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - TestPolimorfismo",
             "request": "launch",
             "mainClass": "Polimorfismo.TestPolimorfismo",
