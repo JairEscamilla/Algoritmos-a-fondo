@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestPolimorfismo",
+            "request": "launch",
+            "mainClass": "Polimorfismo.TestPolimorfismo",
+            "projectName": "Algoritmos-a-fondo_33a7781f"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestFechaDetallada",
+            "request": "launch",
+            "mainClass": "Herencia.TestFechaDetallada",
+            "projectName": "Algoritmos-a-fondo_33a7781f"
+        }
+    ]
+}
