@@ -26,7 +26,7 @@ public class MiColeccion{
             }
             aux = null;
         } 
-        for (int j = len - 1; j >= i; j++) {
+        for (int j = len - 1; j >= i; j--) {
             datos[j+1] = datos[j];
         }
         datos[i] = elm;
