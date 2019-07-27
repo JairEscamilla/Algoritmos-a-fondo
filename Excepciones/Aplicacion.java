@@ -4,11 +4,14 @@ import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
+import javax.management.RuntimeErrorException;
+
 public class Aplicacion {
     public Usuario login(String usrname, String password) throws ErrorFisicoException{
+        FileInputStream fis = null;
         try{
                 // Abrimos el archivo de propiedades para lectura
-            FileInputStream fis = new FileInputStream("Excepciones/usuario.properties");
+            fis = new FileInputStream("Excepciones/usuario.properties");
 
             // Cargamos el archivo de propiedades en un objeto de tipo properties
             Properties p = new Properties();
@@ -24,6 +27,13 @@ public class Aplicacion {
             return u;
         }catch(Exception ex){
             throw new ErrorFisicoException(ex);
+        }finally{
+            try{
+                if(fis != null) 
+                    fis.close();
+            }catch(Exception asd){
+                asd.printStackTrace();
+            }
         }
     }
 }
