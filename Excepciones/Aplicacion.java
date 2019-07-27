@@ -2,9 +2,10 @@ package Excepciones;
 
 import java.io.FileInputStream;
 import java.util.Properties;
+import java.util.ResourceBundle;
 
-public class Aplicacion{
-    public Usuario login(String usrname, String password){
+public class Aplicacion {
+    public Usuario login(String usrname, String password) throws ErrorFisicoException{
         try{
                 // Abrimos el archivo de propiedades para lectura
             FileInputStream fis = new FileInputStream("Excepciones/usuario.properties");
@@ -22,7 +23,7 @@ public class Aplicacion{
             }
             return u;
         }catch(Exception ex){
-            throw new RuntimeException("Error verificando datos", ex);
+            throw new ErrorFisicoException(ex);
         }
     }
 }
