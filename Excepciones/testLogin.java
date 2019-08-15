@@ -9,7 +9,6 @@ public class testLogin{
         } catch (Exception e) {
             System.out.println("Servicio temporalmente interrumpido");
             System.out.println(e.getMessage());
-            //TODO: handle exception
         }
     }
 }
